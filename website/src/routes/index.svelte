@@ -11,13 +11,11 @@
     import JobCard from '../components/jobs/job-card.svelte';
 
     export let jobs;
-    console.log(jobs)
 
     let searchTerm = "";
     let filteredJobs = [];
 
     $:{
-        console.log(searchTerm)
         if(searchTerm){
             filteredJobs = jobs.filter(job => {
                 let scopedSearch = searchTerm.toLowerCase();
@@ -38,10 +36,10 @@
 
 <h1 class="text-4xl text-center my-8 uppercase">Welcome to Pablo Durán's Webpage</h1>
 
-<input class="w-full rounder-md text-lg p-4 border-2 border-gray-200" type="text" bind:value="{searchTerm}" placeholder="What experience do you need from me?">
+<!-- <input class="w-full rounder-md text-lg p-4 border-2 border-gray-200" type="text" bind:value="{searchTerm}" placeholder="What experience do you need from me?"> -->
 
 <div class="grid gap-4 md:grid-cols-2 grid-cols-1">
-    {#each filteredJobs as job}
+    {#each jobs as job}
         <JobCard job={job} />
     {/each}
 </div>

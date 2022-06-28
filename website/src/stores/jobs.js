@@ -43,26 +43,15 @@ const fetchJobs = async () => {
 
 fetchJobs();
 
-console.log('url',params)
-        const idJob = params.id;
-        console.log('ID RECIEVED', idJob)
+const idJob = params.id;
 
-        const job = {
-			id: 2,
-			company: 'WiTI',
-			startDate: '2021-03-01',
-			endDate: '2022-08-31',
-			isActualJob: true,
-			description: 'This is an awesome company',
-			tags: [
-				'Node.js',
-				'Typescript',
-				'AWS',
-				'Postgresql',
-				'AuroraDB',
-				'AWS Lambda',
-				'RDS',
-				'React.js'
-			]
-		};
-        return { props: {job}}
+const job = {
+	id: 2,
+	company: 'WiTI',
+	startDate: '2021-03-01',
+	endDate: '2022-08-31',
+	isActualJob: true,
+	description: 'This is an awesome company',
+	tags: ['Node.js', 'Typescript', 'AWS', 'Postgresql', 'AuroraDB', 'AWS Lambda', 'RDS', 'React.js']
+};
+return { props: { job } };
