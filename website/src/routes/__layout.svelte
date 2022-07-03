@@ -1,9 +1,14 @@
 <script>
     import Nav from '../components/nav/nav.svelte'
+    import Footer from '../components/footer/footer.svelte'
 </script>
-<div class="p-8 max-w-6xl mx-auto">
+<div class="bg-white dark:bg-oxford p-8 mx-auto text-teal dark:text-cream">
     <Nav/>
-    <slot/>
+    <div class="container mx-auto dark:bg-cardinal dark:bg-opacity-50 p-8 rounded-b-lg">
+        <slot/>
+    </div>
+    <Footer/>
+    
 </div>
 
 <style>

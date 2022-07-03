@@ -11,8 +11,22 @@
 
 	export let jobs;
 
-	let searchTerm = '';
+
+	let technologies = [];
+	/* let searchTerm = '';
 	let filteredJobs = [];
+
+	for(const job of jobs){
+		if(technologies.length != 0){
+			technologies = [...technologies.concat(job.technologies)];
+		}else{
+			technologies = [...job.technologies]
+		}
+	}
+
+	
+
+	console.log(technologies)
 
 	$: {
 		if (searchTerm) {
@@ -27,19 +41,41 @@
 		} else {
 			filteredJobs = [...jobs];
 		}
+	} */
+	for(const job of jobs){
+		if(technologies.length != 0){
+			technologies = [...technologies.concat(job.technologies)];
+		}else{
+			technologies = [...job.technologies]
+		}
 	}
+	technologies = technologies.filter((i,p)=>technologies.indexOf(i)===p)
 </script>
 
 <svelte:head>
-	<title>Pablo Durán - Webpage</title>
+	<title>Pablo Durán Celis</title>
 </svelte:head>
 
-<h1 class="text-4xl text-center my-8 uppercase">Welcome to Pablo Durán's Webpage</h1>
-
-<!-- <input class="w-full rounder-md text-lg p-4 border-2 border-gray-200" type="text" bind:value="{searchTerm}" placeholder="What experience do you need from me?"> -->
-
-<div class="grid gap-4 md:grid-cols-2 grid-cols-1">
-	{#each jobs as job}
-		<JobCard {job} />
-	{/each}
+<div class="grid gap-1">
+	<h1 class="text-4xl text-center mt-8 uppercase">Pablo E. Durán Celis</h1>
+	<h2 class="text-2xl text-center mb-4">Software Engineer</h2>
 </div>
+
+
+
+<h3 class="mb-4 text-center">My experience</h3>
+<div class="grid gap-2 my-4 md:grid-cols-2 grid-cols-1">
+		{#each jobs as job}
+			<JobCard {job} />
+		{/each}
+</div>
+
+{#if technologies.length > 0}
+<h3 class="mb-4 text-center">Tools & Technologies</h3>
+<div class="grid gap-2 lg:grid-cols-6 md:grid-cols-4 grid-cols-2 my-4">
+	{#each technologies as tech}
+		<div>{tech}</div>
+	{/each}
+</div>	
+{/if}
+
