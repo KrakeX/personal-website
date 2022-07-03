@@ -6,9 +6,81 @@
 	}
 </script>
 
+<script>
+	import JobCard from '../components/jobs/job-card.svelte';
+	import Icon from '../components/icon/icon.svelte';
+
+	export let jobs;
+
+
+	let technologies = [];
+	/* let searchTerm = '';
+	let filteredJobs = [];
+
+	for(const job of jobs){
+		if(technologies.length != 0){
+			technologies = [...technologies.concat(job.technologies)];
+		}else{
+			technologies = [...job.technologies]
+		}
+	}
+
+	
+
+	console.log(technologies)
+
+	$: {
+		if (searchTerm) {
+			filteredJobs = jobs.filter((job) => {
+				let scopedSearch = searchTerm.toLowerCase();
+				const tags = job.tags.toString().toLowerCase();
+				const termsToSearch = scopedSearch.replace(',', ' ').split(' ');
+				for (const term of termsToSearch) {
+					return tags.match(new RegExp('\\b' + term + '\\b', 'i')) != null;
+				}
+			});
+		} else {
+			filteredJobs = [...jobs];
+		}
+	} */
+	for(const job of jobs){
+		if(technologies.length != 0){
+			technologies = [...technologies.concat(job.technologies)];
+		}else{
+			technologies = [...job.technologies]
+		}
+	}
+	technologies = technologies.filter((i,p)=>technologies.indexOf(i)===p)
+</script>
+
 <svelte:head>
-	<title>Pablo Durán - Webpage</title>
+	<title>Pablo Durán Celis</title>
 </svelte:head>
 
-<h1 class="text-4xl text-center my-8 uppercase">Welcome to Pablo Durán's Webpage</h1>
-<h2 class="text-4xl text-center my-8 uppercase">Under construction</h2>
+<div class="grid gap-1">
+	<h1 class="text-4xl text-center mt-8 uppercase">Pablo E. Durán Celis</h1>
+	<h2 class="text-2xl text-center mb-4">Software Engineer</h2>
+</div>
+
+
+
+<h3 class="mb-4 text-center">My experience</h3>
+<div class="grid gap-2 my-4 md:grid-cols-2 grid-cols-1">
+		{#each jobs as job}
+			<JobCard {job} />
+		{/each}
+</div>
+
+{#if technologies.length > 0}
+{#if technologies && technologies.length > 0}
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 dark:bg-opacity-60 rounded">
+	<h3 class="mb-4 text-center">Tools & Technologies I've worked with...</h3>
+	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
+		{#each technologies as techSlug}
+		 	<Icon slug={techSlug} />
+		{/each}
+	</div>
+	</div>
+	{/if}	
+{/if}
+

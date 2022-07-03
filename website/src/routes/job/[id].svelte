@@ -2,15 +2,57 @@
 	export async function load({ params, fetch }) {
 		const res = await fetch(`/api/jobs/${+params.id}`);
 		const job = await res.json();
-		console.log(job);
 		return { props: { job } };
 	}
 </script>
 
 <script>
+import Icon from '../../components/icon/icon.svelte';
 	export let job;
 </script>
 
 <div class="flex flex-col items-center">
-	<h1 class="text-4xl text-center my-8 uppercase">{job.title}</h1>
+	<h1 class="text-4xl text-center mt-4">{job.title}</h1>
+	<h2 class="mt-2">at {job.company}</h2>
+</div>
+<div class="grid grid-cols-1 gap-2 text-left">
+	{#if job.description}
+	<div class="my-4">	
+	<h3>Job Description</h3>
+		<div>
+			<p class="text-justify">{job.description}</p>
+		</div>
+	</div>
+	{/if}
+	{#if job.clients && job.clients.length > 0}
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
+		<h3 class="mb-4 text-center">Clients</h3>
+		<div class="grid lg:gap-1 gap-2 lg:px-8 md:grid-cols-3 md:px-4  grid-cols-2 my-4">
+			{#each job.clients as clients}
+			<Icon slug={clients} />
+			{/each}
+		</div>
+	</div>
+	{/if}
+	{#if job.integrations && job.integrations.length > 0}
+		<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
+			<h3 class="mb-4 text-center">Integrations</h3>
+			<div class="grid grid-flow-row">
+				{#each job.integrations as integration}
+					<Icon slug={integration} />
+				{/each}
+			</div>
+		</div>
+	{/if}
+	{#if job.technologies && job.technologies.length > 0}
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
+	<h3 class="mb-4 text-center">Tools & Technologies</h3>
+	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
+		{#each job.technologies as techSlug}
+		 	<Icon slug={techSlug} />
+		{/each}
+	</div>
+	</div>
+	{/if}
+	
 </div>
