@@ -21,11 +21,12 @@ export const jobs = [
 			'awslambda',
 			'amazonrds',
 			'react',
-			'react-native',
+			'reactNative',
 			'fastify',
 			'typeorm',
 			'amazoneks',
-			'jira'
+			'jira',
+			'visualstudiocode'
 		],
 		clients: ['uber'],
 		integrations: ['vtex']
@@ -44,16 +45,16 @@ export const jobs = [
 		technologies: [
 			'nodedotjs',
 			'typescript',
-			'amazonamazonaws',
+			'amazonaws',
 			'postgresql',
 			'amazondynamodb',
 			'awslambda',
-			'elastic-beanstalk',
+			'amazonec2',
 			'react',
 			'ionic',
-			'nestjsjs'
+			'nestjs'
 		],
-		clients: ['burger-king', 'cencosud', 'witi'],
+		clients: ['burgerKing', 'cencosud', 'witi'],
 		integrations: ['alsea']
 	},
 	{
@@ -75,7 +76,7 @@ export const jobs = [
 			'awslambda',
 			'amazonrds',
 			'react',
-			'react-native'
+			'reactNative'
 		],
 		clients: ['cuprum']
 	},
@@ -99,7 +100,7 @@ export const jobs = [
 			'awslambda',
 			'amazonrds',
 			'react',
-			'react-native'
+			'reactNative'
 		],
 		clients: ['klu']
 	},
@@ -123,8 +124,10 @@ export const jobs = [
 			'awslambda',
 			'amazonrds',
 			'react',
-			'react-native'
+			'reactNative',
+			'visualstudio',
+			'microsoftsqlserver'
 		],
-		clients: ['bank-bci']
+		clients: ['bancoBci']
 	}
 ];

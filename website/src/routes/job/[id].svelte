@@ -25,31 +25,34 @@ import Icon from '../../components/icon/icon.svelte';
 	</div>
 	{/if}
 	{#if job.clients && job.clients.length > 0}
-	<div class="my-4">
-		<h3>Clients</h3>
-		<div class="grid grid-flow-row">
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
+		<h3 class="mb-4 text-center">Clients</h3>
+		<div class="grid lg:gap-1 gap-2 lg:px-8 md:grid-cols-3 md:px-4  grid-cols-2 my-4">
 			{#each job.clients as clients}
-				<div> - {clients}</div>
+			<Icon slug={clients} />
 			{/each}
 		</div>
 	</div>
 	{/if}
 	{#if job.integrations && job.integrations.length > 0}
-		<div class="my-4">
-			<h3>Integrations</h3>
+		<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
+			<h3 class="mb-4 text-center">Integrations</h3>
 			<div class="grid grid-flow-row">
 				{#each job.integrations as integration}
-					<div> - {integration}</div>
+					<Icon slug={integration} />
 				{/each}
 			</div>
 		</div>
 	{/if}
 	{#if job.technologies && job.technologies.length > 0}
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
 	<h3 class="mb-4 text-center">Tools & Technologies</h3>
-	<div class="grid gap-2 lg:grid-cols-6 md:grid-cols-4 grid-cols-2 my-4">
-		{#each job.technologies as tech}
-		 	<Icon icon={tech} />
+	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
+		{#each job.technologies as techSlug}
+		 	<Icon slug={techSlug} />
 		{/each}
-	</div>	
+	</div>
+	</div>
 	{/if}
+	
 </div>

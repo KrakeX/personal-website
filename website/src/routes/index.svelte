@@ -8,6 +8,7 @@
 
 <script>
 	import JobCard from '../components/jobs/job-card.svelte';
+	import Icon from '../components/icon/icon.svelte';
 
 	export let jobs;
 
@@ -71,11 +72,15 @@
 </div>
 
 {#if technologies.length > 0}
-<h3 class="mb-4 text-center">Tools & Technologies</h3>
-<div class="grid gap-2 lg:grid-cols-6 md:grid-cols-4 grid-cols-2 my-4">
-	{#each technologies as tech}
-		<div>{tech}</div>
-	{/each}
-</div>	
+{#if technologies && technologies.length > 0}
+	<div class="my-4 dark:bg-cream dark:text-oxford p-4 dark:bg-opacity-60 rounded">
+	<h3 class="mb-4 text-center">Tools & Technologies I've worked with...</h3>
+	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
+		{#each technologies as techSlug}
+		 	<Icon slug={techSlug} />
+		{/each}
+	</div>
+	</div>
+	{/if}	
 {/if}
 
