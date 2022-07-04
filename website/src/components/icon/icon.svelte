@@ -52,7 +52,13 @@
         'klu':'Klu Trending & Novelties',
         'dotnet': '.Net',
         'kubernetes': 'Kubernetes',
-        'docker':'Docker'
+        'docker':'Docker',
+        'wordpress':'Wordpress',
+        'php':'php',
+        'sequelize': 'Sequelize',
+        'adobephotoshop':'Photoshop',
+        'woocommerce': 'WooCommerce',
+        'javascript': 'Javascript'
     }
 </script>
 <div class="flex flex-1 items-center self-center">
@@ -61,11 +67,11 @@
     {:then response}
     <div class="flex flex-col items-center mx-auto">
         {#if response.status == 200}
-        <div class="icon text-white dark:bg-oxford" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
-        <span class="text-xs ml-2">{techsNames[slug] ? techsNames[slug]: ''}</span>
+        <div class="icon text-white dark:bg-primary" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
+        <span class="text-xs mt-1 text-center">{techsNames[slug] ? techsNames[slug]: ''}</span>
         {/if}
         {#if response.status !== 200 }
-            <span class="text-sm">{techsNames[slug] ? techsNames[slug]: slug}</span> 
+            <span class="text-sm text-center">{techsNames[slug] ? techsNames[slug]: slug}</span> 
         {/if}
     </div>
     {:catch err}

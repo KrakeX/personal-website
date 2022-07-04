@@ -45,6 +45,7 @@ export const jobs = [
 			"Development in various projects for WiTI, Alsea: New Burger King API for delivery app and Cencosud's Capacity Center developing in the javascript/typescript stack with nestjsjs. Libraries and frameworks used: Reactjs, Angular, Ionic, Redux, nodedotjsjs, nestjsjs. Service integrations with amazonaws: Elastic Beanstalk, DynamoDb, postgresql, S3. Documentation with OpenAPI (Swagger) and pipelines.",
 		technologies: [
 			'nodedotjs',
+			'javascript',
 			'typescript',
 			'amazonaws',
 			'postgresql',
@@ -53,7 +54,8 @@ export const jobs = [
 			'amazonec2',
 			'react',
 			'ionic',
-			'nestjs'
+			'nestjs',
+			'visualstudiocode'
 		],
 		clients: ['burgerking', 'cencosud', 'witi'],
 		integrations: ['alsea']
@@ -68,12 +70,12 @@ export const jobs = [
 		endDate: '2022-08-31',
 		isActualJob: false,
 		description: "Developer in charge of updating AFP Cuprum's proprietary Legacy software.",
-		technologies: ['dotnet', 'visualstudio'],
+		technologies: ['dotnet', 'visualstudio', 'microsoftsqlserver'],
 		clients: ['cuprum']
 	},
 	{
 		id: 4,
-		title: 'Software Engineer',
+		title: 'Technical Lead',
 		company: 'Klu Trending & Novelties',
 		companyBrief: 'Entertainment Company',
 		slug: 'klu',
@@ -83,18 +85,16 @@ export const jobs = [
 		description:
 			'Technical Leader in charge of project management with external providers, also focused on the development of internal applications, performing the analysis and subsequent execution.',
 		technologies: [
-			'nodedotjs',
-			'typescript',
-			'amazonaws',
-			'postgresql',
-			'awslambda',
-			'amazonrds',
-			'react',
-			'reactNative',
-			'csharp',
-			'mysql'
+			'wordpress',
+			'visualstudiocode',
+			'php',
+			'sequelize',
+			'shoppify',
+			'adobephotoshop',
+			'mysql',
+			'woocommerce'
 		],
-		clients: ['klu']
+		clients: []
 	},
 	{
 		id: 5,
@@ -107,20 +107,7 @@ export const jobs = [
 		isActualJob: false,
 		description:
 			'Developer for a company in the banking sector, creating an internal application to improve management, response times and automation of billing for services provided by workers.',
-		technologies: [
-			'nodedotjs',
-			'typescript',
-			'amazonaws',
-			'postgresql',
-			'auroradb',
-			'awslambda',
-			'amazonrds',
-			'react',
-			'reactNative',
-			'visualstudio',
-			'microsoftsqlserver',
-			'dotnet'
-		],
+		technologies: ['visualstudio', 'microsoftsqlserver', 'dotnet'],
 		clients: ['bancoBci']
 	}
 ];
