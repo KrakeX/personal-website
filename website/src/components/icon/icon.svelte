@@ -8,7 +8,7 @@
         const res =  fetch(svgUrl).then((response) => {
             return response;
         }).catch((ex)=>{
-            console.log('logo not found',ex)
+            console.error('logo not found',ex)
         })
         return res;
     }
@@ -54,16 +54,20 @@
         'kubernetes': 'Kubernetes',
         'docker':'Docker',
         'wordpress':'Wordpress',
-        'php':'php',
         'sequelize': 'Sequelize',
         'adobephotoshop':'Photoshop',
         'woocommerce': 'WooCommerce',
-        'javascript': 'Javascript'
+        'javascript': 'Javascript',
+        'amazons3': 'AWS S3',
+        'swagger':'Swagger',
+        'redux': 'Redux',
+        'terraform': 'Terraform',
+        'shopify': 'Shopify'
     }
 </script>
 <div class="flex flex-1 items-center self-center">
     {#await iconPromise }
-        <p>Icon</p>
+        <p class="text-sm text-center">Icon</p>
     {:then response}
     <div class="flex flex-col items-center mx-auto">
         {#if response.status == 200}
