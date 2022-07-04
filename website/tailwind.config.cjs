@@ -5,14 +5,19 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		colors: {
-			oxfordlight: '#032863',
 			oxford: '#011028',
 			viridian: '#119DA4',
 			teal: '#0C7489',
 			cream: '#D7D9CE',
 			white: '#FDFFFC',
 			honey: '#F2AF29',
-			cardinal: '#AD343E'
+			cardinal: '#AD343E',
+			primary: '#011028',
+			secondary: '#724CF9',
+			tertiary: '#EDF67D',
+			quaternary: '#CA7DF9',
+			senary: '#D36135',
+			septenary: '#7FB069'
 		},
 		fontFamily: {
 			sans: ['Graphik', 'sans-serif'],
