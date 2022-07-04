@@ -31,7 +31,7 @@
 
 
 
-<div class="grid gap-2 my-4 md:grid-cols-2 grid-cols-1">
+<div class="grid gap-2 py-4 md:grid-cols-2 grid-cols-1">
 		{#each jobs as job}
 			<JobCard {job} />
 		{/each}
