@@ -27,7 +27,9 @@ export const jobs = [
 			'docker',
 			'kubernetes',
 			'jira',
-			'visualstudiocode'
+			'visualstudiocode',
+			'swagger',
+			'terraform'
 		],
 		clients: [],
 		integrations: ['vtex']
@@ -55,7 +57,10 @@ export const jobs = [
 			'react',
 			'ionic',
 			'nestjs',
-			'visualstudiocode'
+			'visualstudiocode',
+			'swagger',
+			'amazons3',
+			'redux'
 		],
 		clients: ['burgerking', 'cencosud', 'witi'],
 		integrations: ['alsea']
@@ -89,7 +94,7 @@ export const jobs = [
 			'visualstudiocode',
 			'php',
 			'sequelize',
-			'shoppify',
+			'shopify',
 			'adobephotoshop',
 			'mysql',
 			'woocommerce'
