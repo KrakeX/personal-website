@@ -1,5 +1,6 @@
 <script>
     export let slug;
+    export let size;
     let iconPromise = getIcon(slug);
 
     function getIcon(slug){
@@ -36,7 +37,7 @@
         'amazonec2': 'AWS EC2',
         'amazondynamodb': 'AWS DynamoDB',
         'cuprum': 'AFP Cuprum',
-        'burgerKing': 'Buerger King',
+        'burgerking': 'Buerger King',
         'cencosud': 'Cencosud',
         'alsea': 'Alsea',
         'witi': 'WiTI',
@@ -47,29 +48,26 @@
         'visualstudiocode': 'VS Code',
         'visualstudio': 'Visual Studio',
         'microsoftsqlserver': 'Microsoft SQL Server',
-        'bancoBci': 'Banco BCI'
+        'bancoBci': 'Banco BCI',
+        'klu':'Klu Trending & Novelties',
+        'dotnet': '.Net',
+        'kubernetes': 'Kubernetes',
+        'docker':'Docker'
     }
 </script>
-<div class="flex flex-col items-center self-center">
+<div class="flex flex-1 items-center self-center">
     {#await iconPromise }
         <p>Icon</p>
     {:then response}
+    <div class="flex flex-col items-center mx-auto">
         {#if response.status == 200}
-        <div class="icon text-white dark:bg-oxford" style="mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain;"></div>
-        <span class="text-xs">{techsNames[slug] ? techsNames[slug]: ''}</span>
+        <div class="icon text-white dark:bg-oxford" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
+        <span class="text-xs ml-2">{techsNames[slug] ? techsNames[slug]: ''}</span>
         {/if}
         {#if response.status !== 200 }
             <span class="text-sm">{techsNames[slug] ? techsNames[slug]: slug}</span> 
         {/if}
+    </div>
     {:catch err}
     {/await}
 </div>
-
-
-<style>
-    .icon {
-    width: 35px;
-    height: 35px;
-    margin-top: 2px;
-    }
-</style>

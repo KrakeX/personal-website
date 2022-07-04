@@ -4,7 +4,7 @@
 </script>
 <div class="bg-white dark:bg-oxford py-4 mx-auto text-teal dark:text-cream">
     <Nav/>
-    <div class="container mx-auto dark:bg-cardinal dark:bg-opacity-50 md:px-8 md:py-4 px-2  rounded-b-lg">
+    <div class="container xl:max-w-6xl max-w-none mx-auto dark:bg-cardinal dark:bg-opacity-50 md:px-8 md:py-4 px-2 rounded-b-lg">
         <slot/>
     </div>
     <Footer/>

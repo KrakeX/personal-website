@@ -77,7 +77,7 @@
 	<h3 class="mb-4 text-center">Tools & Technologies I've worked with...</h3>
 	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
 		{#each technologies as techSlug}
-		 	<Icon slug={techSlug} />
+		 	<Icon slug={techSlug} size={25}/>
 		{/each}
 	</div>
 	</div>

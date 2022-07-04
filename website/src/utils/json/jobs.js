@@ -24,11 +24,12 @@ export const jobs = [
 			'reactNative',
 			'fastify',
 			'typeorm',
-			'amazoneks',
+			'docker',
+			'kubernetes',
 			'jira',
 			'visualstudiocode'
 		],
-		clients: ['uber'],
+		clients: [],
 		integrations: ['vtex']
 	},
 	{
@@ -54,7 +55,7 @@ export const jobs = [
 			'ionic',
 			'nestjs'
 		],
-		clients: ['burgerKing', 'cencosud', 'witi'],
+		clients: ['burgerking', 'cencosud', 'witi'],
 		integrations: ['alsea']
 	},
 	{
@@ -67,17 +68,7 @@ export const jobs = [
 		endDate: '2022-08-31',
 		isActualJob: false,
 		description: "Developer in charge of updating AFP Cuprum's proprietary Legacy software.",
-		technologies: [
-			'nodedotjs',
-			'typescript',
-			'amazonaws',
-			'postgresql',
-			'auroradb',
-			'awslambda',
-			'amazonrds',
-			'react',
-			'reactNative'
-		],
+		technologies: ['dotnet', 'visualstudio'],
 		clients: ['cuprum']
 	},
 	{
@@ -96,11 +87,12 @@ export const jobs = [
 			'typescript',
 			'amazonaws',
 			'postgresql',
-			'auroradb',
 			'awslambda',
 			'amazonrds',
 			'react',
-			'reactNative'
+			'reactNative',
+			'csharp',
+			'mysql'
 		],
 		clients: ['klu']
 	},
@@ -126,7 +118,8 @@ export const jobs = [
 			'react',
 			'reactNative',
 			'visualstudio',
-			'microsoftsqlserver'
+			'microsoftsqlserver',
+			'dotnet'
 		],
 		clients: ['bancoBci']
 	}

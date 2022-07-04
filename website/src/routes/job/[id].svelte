@@ -27,9 +27,9 @@ import Icon from '../../components/icon/icon.svelte';
 	{#if job.clients && job.clients.length > 0}
 	<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
 		<h3 class="mb-4 text-center">Clients</h3>
-		<div class="grid lg:gap-1 gap-2 lg:px-8 md:grid-cols-3 md:px-4  grid-cols-2 my-4">
+		<div class="flex flex-row mt-8">
 			{#each job.clients as clients}
-			<Icon slug={clients} />
+			<Icon slug={clients} size={50}/>
 			{/each}
 		</div>
 	</div>
@@ -37,9 +37,9 @@ import Icon from '../../components/icon/icon.svelte';
 	{#if job.integrations && job.integrations.length > 0}
 		<div class="my-4 dark:bg-cream dark:text-oxford p-4 rounded">
 			<h3 class="mb-4 text-center">Integrations</h3>
-			<div class="grid grid-flow-row">
+			<div class="grid grid-flow-row mt-8">
 				{#each job.integrations as integration}
-					<Icon slug={integration} />
+					<Icon slug={integration} size={35}/>
 				{/each}
 			</div>
 		</div>
@@ -49,7 +49,7 @@ import Icon from '../../components/icon/icon.svelte';
 	<h3 class="mb-4 text-center">Tools & Technologies</h3>
 	<div class="grid lg:gap-1 gap-2 lg:grid-cols-6 lg:px-8 md:grid-cols-4 md:px-4  grid-cols-2 my-4">
 		{#each job.technologies as techSlug}
-		 	<Icon slug={techSlug} />
+		 	<Icon slug={techSlug} size={35}/>
 		{/each}
 	</div>
 	</div>
