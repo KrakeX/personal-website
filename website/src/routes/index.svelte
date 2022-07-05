@@ -9,7 +9,8 @@
 <script>
 	import JobCard from '../components/jobs/job-card.svelte';
 	import Icon from '../components/icon/icon.svelte';
-	import Banner from '../components/banner/banner.svelte'
+	import Banner from '../components/banner/banner.svelte';
+	import profilePicture from '$lib/assets/profile.jpeg';
 
 	export let jobs;
 
@@ -35,6 +36,17 @@
 </svelte:head>
 
 <Banner text={bannerText} button={bannerButtonText} icon={bannerIconSrc} url={bannerButtonUrl}/>
+
+<div class="md:mt-4 p-4 gap-4 md:text-base text-sm">
+	<h2 class="text-2xl font-bold text-center my-2">Professional Me</h2>
+	<img class="rounded-full md:w-52 md:h-52 h-32 w-32 md:float-right float-none md:mx-6 mx-auto my-2" src={profilePicture} alt="profile" />
+	<p class="my-3 md:text-left text-justify">
+		Diligent software engineer with 8+ years of experience in software development trying to create innovative and cutting edge solutions so we can bring exceptional services to our internal/external customers. My main goal nowadays is to become a better professional for the videogames industry, so I keep learning about it, but still loving what I'm doing today for retail.	
+	</p>
+	<p class="my-3 md:text-left text-justify">
+		My goal is to be “whatever the business needs”, always looking for personal growth. I always like to take the initiative, going forward through new challenges with positive and team-based leadership. This goal brought me where I am right now, allowing me to learn different languages from C# at the beginning, going through Java, javascript, Typescript and learning Python at this moment. My personal seal and compromise with the company will always be: “To become the best professional the company needs”.
+	</p>
+</div>
 
 <div class="grid gap-2 py-4 md:grid-cols-2 grid-cols-1">
 		{#each jobs as job}
