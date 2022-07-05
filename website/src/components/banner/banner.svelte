@@ -4,7 +4,7 @@
     export let icon;
     export let url;
 </script>
-<div class="dark:bg-senary rounded-2xl">
+<div class="dark:bg-gradient-to-r dark:from-senary dark:via-senary dark:to-secondary dark:bg-opacity-90 rounded-2xl mt-2">
     <div class="max-w-7xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between flex-wrap">
         <div class="w-0 flex-1 flex items-center">
