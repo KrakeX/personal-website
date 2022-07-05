@@ -76,7 +76,7 @@
     {:then response}
     <div class="flex flex-col items-center mx-auto">
         {#if response.status == 200}
-        <div class="icon text-white dark:bg-primary" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
+        <div alt="{slug}-icon" class="icon text-white dark:bg-primary" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
         <span class="text-xs mt-1 text-center">{techsNames[slug] ? techsNames[slug]: ''}</span>
         {/if}
         {#if response.status !== 200 }
