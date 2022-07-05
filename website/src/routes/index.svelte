@@ -38,7 +38,6 @@
 <Banner text={bannerText} button={bannerButtonText} icon={bannerIconSrc} url={bannerButtonUrl}/>
 
 <div class="md:mt-4 p-4 gap-4 md:text-base text-sm">
-	<h2 class="text-2xl font-bold text-center my-2">Professional Me</h2>
 	<img class="rounded-full md:w-52 md:h-52 h-32 w-32 md:float-right float-none md:mx-6 mx-auto my-2" src={profilePicture} alt="profile" />
 	<p class="my-3 md:text-left text-justify">
 		Diligent software engineer with 8+ years of experience in software development trying to create innovative and cutting edge solutions so we can bring exceptional services to our internal/external customers. My main goal nowadays is to become a better professional for the videogames industry, so I keep learning about it, but still loving what I'm doing today for retail.	
