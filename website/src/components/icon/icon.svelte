@@ -24,11 +24,11 @@
         'typeorm': 'TypeORM',
         'express': 'Express',
         'postgresql': 'Postgresql',
-        'react': 'React',
+        'react': 'React.js',
         'amazoneks': 'AWS EKS',
         'nestjs': 'Nestjs',
         'auroradb': 'AWS Auroradb',
-        'reactNative': 'Reactive Native',
+        'reactNative': 'React Native',
         'jira': 'Jira',
         'typescript': 'Typescript',
         'awslambda': 'AWS Lambda',
@@ -62,7 +62,12 @@
         'swagger':'Swagger',
         'redux': 'Redux',
         'terraform': 'Terraform',
-        'shopify': 'Shopify'
+        'shopify': 'Shopify',
+        'razor': 'Razor',
+        'wcf': 'WCF',
+        'visualbasic': 'Visual Basic',
+        'gitlab': 'GitLab',
+        'angular': 'Angular.js'
     }
 </script>
 <div class="flex flex-1 items-center self-center">
@@ -71,7 +76,7 @@
     {:then response}
     <div class="flex flex-col items-center mx-auto">
         {#if response.status == 200}
-        <div class="icon text-white dark:bg-primary" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
+        <div alt="{slug}-icon" class="icon text-white dark:bg-primary" style="width: {size}px; height: {size}px; mask: url({response.url}) no-repeat center / contain;-webkit-mask: url({response.url}) no-repeat center / contain; margin-top: 2px;"></div>
         <span class="text-xs mt-1 text-center">{techsNames[slug] ? techsNames[slug]: ''}</span>
         {/if}
         {#if response.status !== 200 }
