@@ -8,7 +8,7 @@
         <span class="block text-secondary xl:inline">Software Engineer</span>
       </h1>
     <Nav/>
-    <div class="container xl:max-w-6xl max-w-none mx-auto dark:bg-secondary dark:bg-opacity-30 md:px-8 md:py-4 px-2 rounded-b-lg">
+    <div class="container xl:max-w-6xl max-w-none mx-auto dark:bg-secondary dark:bg-opacity-30 md:px-8 md:py-4 pt-2 px-2 rounded-b-lg">
         <slot/>
     </div>
     <Footer/>

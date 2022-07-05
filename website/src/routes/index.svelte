@@ -17,7 +17,7 @@
 	let technologies = [];
 	let bannerText = `You can explore the source code of this project on the next Link`
 	let bannerIconSrc = `https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg`
-	let bannerButtonText = `Go to Github`;
+	let bannerButtonText = `Check this project`;
 	let bannerButtonUrl = 'https://github.com/KrakeX/personal-website/tree/main/website'
 
 	for(const job of jobs){
@@ -46,7 +46,7 @@
 {#if technologies && technologies.length > 0}
 	<div class="my-4 dark:text-primary xl:px-12 p-4 dark:bg-white dark:bg-opacity-90 rounded">
 	<h3 class="mb-4 text-center">Tools & Technologies I've worked with...</h3>
-	<div class="flex flex-row flex-wrap xl:gap-8 gap-2 mt-4">
+	<div class="flex flex-row flex-wrap xl:gap-8 gap-3 mt-4">
 		{#each technologies as techSlug}
 		 	<Icon slug={techSlug} size={30}/>
 		{/each}

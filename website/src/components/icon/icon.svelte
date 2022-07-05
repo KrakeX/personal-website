@@ -24,11 +24,11 @@
         'typeorm': 'TypeORM',
         'express': 'Express',
         'postgresql': 'Postgresql',
-        'react': 'React',
+        'react': 'React.js',
         'amazoneks': 'AWS EKS',
         'nestjs': 'Nestjs',
         'auroradb': 'AWS Auroradb',
-        'reactNative': 'Reactive Native',
+        'reactNative': 'React Native',
         'jira': 'Jira',
         'typescript': 'Typescript',
         'awslambda': 'AWS Lambda',
@@ -62,7 +62,12 @@
         'swagger':'Swagger',
         'redux': 'Redux',
         'terraform': 'Terraform',
-        'shopify': 'Shopify'
+        'shopify': 'Shopify',
+        'razor': 'Razor',
+        'wcf': 'WCF',
+        'visualbasic': 'Visual Basic',
+        'gitlab': 'GitLab',
+        'angular': 'Angular.js'
     }
 </script>
 <div class="flex flex-1 items-center self-center">
