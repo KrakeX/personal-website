@@ -37,7 +37,7 @@
         'amazonec2': 'AWS EC2',
         'amazondynamodb': 'AWS DynamoDB',
         'cuprum': 'AFP Cuprum',
-        'burgerking': 'Buerger King',
+        'burgerking': 'Burger King',
         'cencosud': 'Cencosud',
         'alsea': 'Alsea',
         'witi': 'WiTI',
