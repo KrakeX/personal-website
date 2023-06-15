@@ -136,7 +136,7 @@ export const jobs = [
 		slug: 'ltr',
 		startDate: '2023-06-15',
 		endDate: '2023-06-16',
-		isActualJob: true,
+		isActualJob: false,
 		description:
 			'Meme job for examples for educito',
 		technologies: ['nodedotjs',
