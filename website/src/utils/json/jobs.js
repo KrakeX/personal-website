@@ -127,34 +127,5 @@ export const jobs = [
 			'Developer for a company in the banking sector, creating an internal application to improve management, response times and automation of billing for services provided by workers.',
 		technologies: ['visualstudio', 'microsoftsqlserver', 'dotnet'],
 		clients: ['bancoBci']
-	},
-	{
-		id: 6,
-		title: 'Software Engineer Senior y wea',
-		company: 'LTR',
-		companyBrief: 'Traveling Services',
-		slug: 'ltr',
-		startDate: '2023-06-15',
-		endDate: '2023-06-16',
-		isActualJob: false,
-		description:
-			'Meme job for examples for educito',
-		technologies: ['nodedotjs',
-		'javascript',
-		'typescript',
-		'amazonaws',
-		'postgresql',
-		'amazondynamodb',
-		'awslambda',
-		'amazonec2',
-		'angular',
-		'react',
-		'ionic',
-		'nestjs',
-		'visualstudiocode',
-		'swagger',
-		'amazons3',
-		'redux'],
-		clients: ['educito']
 	}
 ];
