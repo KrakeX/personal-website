@@ -3,7 +3,7 @@
     import Nav from '../components/nav/nav.svelte'
     import Footer from '../components/footer/footer.svelte'
 
-    $: isFullBleed = $page.url.pathname === '/personal';
+    $: isFullBleed = $page.url.pathname === '/';
 </script>
 {#if isFullBleed}
 <slot/>
