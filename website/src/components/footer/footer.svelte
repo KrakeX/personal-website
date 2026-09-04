@@ -12,10 +12,7 @@
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm sm:mb-0 dark:text-white sm:justify-between justify-center">
             <li>
-                <a href="/" class="mr-4 hover:underline md:mr-6 ">Professional Info</a>
-            </li>
-            <li>
-                <a href="/personal" class="mr-4 hover:underline md:mr-6">Personal Info</a>
+                <a href="/" class="mr-4 hover:underline md:mr-6 ">Home</a>
             </li>
         </ul>
     </div>
