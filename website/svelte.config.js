@@ -8,6 +8,7 @@ const config = {
 			precompress: false
 		}),
 		vite: {
+			assetsInclude: ['**/*.JPG'],
 			build: { target: 'es2015' },
 			server: {
 				fs: {
