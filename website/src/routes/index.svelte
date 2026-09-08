@@ -1,6 +1,13 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script>
 	import { onMount, onDestroy } from 'svelte';
 	import profilePicture from '$lib/assets/profile.JPG';
+	import Seo from '$lib/seo/Seo.svelte';
+	import { buildPersonJsonLd, absolute } from '$lib/seo/seo.js';
+	import { DEFAULT_OG_IMAGE } from '$lib/seo/config.js';
 
 	const YEARS = new Date().getFullYear() - 2012;
 
@@ -376,10 +383,18 @@
 	$: pastRoles = ROLES.filter((r) => !r.current).map((r) => mapRole(r, lang));
 	$: education = EDU.map((e) => ({ school: e.school, dot: e.dot, title: pick(e.title, lang), period: pick(e.period, lang) }));
 	$: openRole = openId ? mapRole(ROLES.find((r) => r.id === openId), lang) : null;
+	$: if (typeof document !== 'undefined') document.documentElement.lang = lang;
 </script>
 
+<Seo
+	title="Pablo Durán Celis — Senior Software Engineer, CTO & CEO"
+	description={COPY.en.intro}
+	path="/"
+	type="profile"
+	jsonLd={buildPersonJsonLd({ description: COPY.en.intro, image: absolute(DEFAULT_OG_IMAGE) })}
+/>
+
 <svelte:head>
-	<title>Pablo Durán Celis — CV</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link

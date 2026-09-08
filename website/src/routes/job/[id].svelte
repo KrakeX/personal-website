@@ -1,4 +1,6 @@
 <script context="module">
+	export const prerender = true;
+
 	export async function load({ params, fetch }) {
 		const res = await fetch(`/api/jobs/${+params.id}`);
 		const job = await res.json();
@@ -8,8 +10,18 @@
 
 <script>
 import Icon from '../../components/icon/icon.svelte';
+import Seo from '$lib/seo/Seo.svelte';
+import { truncate } from '$lib/seo/seo.js';
+import { SITE_NAME } from '$lib/seo/config.js';
 	export let job;
 </script>
+
+<Seo
+	title={`${job.title} — ${job.company} | ${SITE_NAME}`}
+	description={truncate(job.description)}
+	path={`/job/${job.id}`}
+	type="article"
+/>
 
 <div class="flex flex-col items-center">
 	<h1 class="text-4xl text-center mt-4">{job.title}</h1>
