@@ -17,7 +17,7 @@ Marca: chevron `>` en verde Night Owl con cursor cian sobre fondo `#011627`.
 
 ## Instalación en SvelteKit
 
-Copia todos los archivos a `website/static/` (reemplazando el `favicon.png` actual) y pega esto en el `<head>` de `website/src/app.html`:
+Copia todos los archivos a `website/static/` (reemplazando el `favicon.svg` actual) y pega esto en el `<head>` de `website/src/app.html`:
 
 ```html
 <link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
