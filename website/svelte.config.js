@@ -1,5 +1,4 @@
 import adapter from '@sveltejs/adapter-auto';
-import { jobs } from './src/utils/json/jobs.js';
 /** @type {import('@sveltejs/kit').Config} */
 
 const config = {
@@ -9,7 +8,7 @@ const config = {
 			precompress: false
 		}),
 		prerender: {
-			entries: ['*', '/sitemap.xml', ...jobs.map((j) => `/job/${j.id}`)]
+			entries: ['*', '/sitemap.xml']
 		},
 		vite: {
 			assetsInclude: ['**/*.JPG'],
